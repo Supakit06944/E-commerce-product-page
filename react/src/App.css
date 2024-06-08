@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.textnavbar {
+  position: relative;
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+  color: hsl(219, 9%, 45%);
+}
+.textnavbar::after {
+  content: "";
+  position: absolute;
+  background-color: orange;
+  height: 4px;
+  width: 0;
+  left: 0;
+  bottom: -40px;
+  transition: 0.3s;
+}
+.textnavbar:hover {
+  color: black;
+}
+.textnavbar:hover::after {
+  width: 100%;
+}
+.container_navbar::before {
+  /* this style is border gray line */
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Half of the remaining space (1440 - 1335) */
+  width: 980px;
+  height: 1px;
+  background-color: #cfd8dc6d;
+}
